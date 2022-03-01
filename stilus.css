@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('kepek/hatter.jpg');
+    color:beige
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+nav, footer {
+    flex: 0 0 100%;
+    background: cadetblue;
+    padding: 2px 5px;
+}
+
+.flexContainer {
+    justify-content: space-between;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    list-style-type: none;
+    padding: 0 15px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffcc66;
+}
+
+nav a:hover {
+    color: coral;
+}
+
+article {
+    flex: 0 0 calc(100% - 40% - 30px);
+    order: 2;
+    border:1px solid white;
+    text-align:justify;
+
+}
+
+article {
+    flex: 3 1 500px;
+}
+
+aside {
+    flex: 1 1 200px;
+}
+
+aside {
+    flex: 1 1 0px;
+    padding: 10px;
+    border:1px solid white;
+}
+
+.bal .jobb {
+    flex: 0 0 20%;
+}
+
+.bal {
+    order: 1;
+}
+
+.jobb {
+    order: 10;
+}
+
+img {
+    width: 40%;
+}
+
+footer {
+    order: 12;
+    text-align: center;
+}
+
+@media screen and (max-width:500px) {
+    .flexContainer {
+        flex-flow:column wrap;
+    }
+    article {
+        order:1;
+    }
+    .bal {
+        order:2;
+    }
+    .jobb {
+        order:3;
+    }
+    nav ul li {
+        display: block;
+    }
+}
